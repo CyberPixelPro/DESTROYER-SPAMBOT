@@ -1,0 +1,152 @@
+{
+  "name": "TEAM DESTROYER SPAM BOT",
+  "description": "SPAM ME GAAND FAAD DENE WALA BOT H🤣🤣❤️ ",
+  "logo": "https://telegra.ph/file/c6d5a3802c0f0a7061a34.jpg",
+  "keywords": [
+    "spambot",
+    "telegram",
+    "userbot"
+  ],
+    "env": {
+      "STRING": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": true
+      },
+      "STRING2": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING3": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING4": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING5": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING6": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING7": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING8": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING9": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING10": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING11": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING12": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING13": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING14": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING15": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING16": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING17": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING18": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING19": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "STRING20": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
+      "USERNAME": {
+        "description": "APNA USERNAME DAAL LE YHA BINA @ KE LINE AT_W0RLDS_END",
+        "value": "AT_W0RLDS_END",
+        "required": false
+      },
+      "ALIVE_NAME": {
+        "description": "APNA KOI ACCHA SA NAME DAAL, JIS SE LADKI IMPRESS HO JAYE 🤣🤣❤️ ",
+        "value": "AT WORLD'S END",
+        "required": false
+      },
+      "API_ID": {
+        "description": "YE BHI MAI HI KRDU, API ID DAALO APNI XD",
+        "value": "",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "YE BHI DAAL DENA GURU, YHA TK AAYA H TO ITNA TO NOOB NI HOGA 😂😂😂",
+        "value": "",
+        "required": true
+      },
+      "SUDO": {
+        "description": "MERA SUDO PDE RHNE DENA, BIGAD NI JAYEGA KUCH HEHE XD, ACCHA PRANI HI HU 😂🤣(❁´◡`❁) ",
+        "value": "",
+        "required": true
+      }
+  },
+  "addons": [{
+    "plan": "heroku-postgresql",
+    "options": {
+      "version": "12"
+    }
+  }],
+  "buildpacks": [{
+    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+  },{
+    "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+  },{
+    "url": "https://github.com/chrismytton/heroku-buildpack-jq"
+  },{
+    "url": "heroku/python"
+  }]
+}
