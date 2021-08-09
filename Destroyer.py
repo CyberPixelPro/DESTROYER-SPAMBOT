@@ -27,7 +27,6 @@ seven = STRING7
 eight = STRING8
 ninth = STRING9
 tenth = STRING10
-eleve = STRING11
 twelvth = STRING12
 thirtenth = STRING13
 forteenth = STRING14
@@ -352,31 +351,7 @@ async def start_Destroyer():
             pass 
           
           
-   if eleve:
-        session_name = str(eleve)
-        print("String 11 Found")
-        vkk = TelegramClient(StringSession(session_name), a, b)
-        try:
-            print("Booting Up The Client 11")
-            await vkk.start()
-            await vkk(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
-            await vkk(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
-            await vkk(functions.channels.JoinChannelRequest(channel="@TEAM_DESTROYER"))
-            botme = await vkk.get_me()
-            botid = telethon.utils.get_peer_id(botme)
-            SMEX_USERS.append(botid)
-        except Exception as e:
-            print(e)
-            pass
-    else:
-        print("Session 11 not Found")
-        pass
-        session_name = "startup"
-        vkk = TelegramClient(session_name, a, b)
-        try:
-            await vkk.start()
-        except Exception as e:
-            pass
+   
         
     
     if twelvth:
