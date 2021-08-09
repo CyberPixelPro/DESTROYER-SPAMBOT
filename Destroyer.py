@@ -618,7 +618,6 @@ async def gifspam(e, smex):
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
 @hdk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@vkk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
