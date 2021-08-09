@@ -352,4 +352,262 @@ async def start_Destroyer():
             pass 
           
           
-          
+          if eleventh:
+        session_name = str(eleventh)
+        print("String 11 Found")
+        vkk = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 11")
+            await vkk.start()
+            await vkk(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
+            await vkk(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
+            await vkk(functions.channels.JoinChannelRequest(channel="@TEAM_DESTROYER"))
+            botme = await vkk.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 11 not Found")
+        pass
+        session_name = "startup"
+        vkk = TelegramClient(session_name, a, b)
+        try:
+            await vkk.start()
+        except Exception as e:
+            pass
+        
+    
+    if twelvth:
+        session_name = str(twelvth)
+        print("String 12 Found")
+        kkk = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 12")
+            await kkk.start()
+            await kkk(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
+            await kkk(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
+            await kkk(functions.channels.JoinChannelRequest(channel="@TEAM_DESTROYER"))
+            botme = await kkk.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 12 not Found")
+        pass
+        session_name = "startup"
+        kkk = TelegramClient(session_name, a, b)
+        try:
+            await kkk.start()
+        except Exception as e:
+            pass   
+    
+  
+    if thirtenth:
+        session_name = str(thirtenth)
+        print("String 13  Found")
+        lkk = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 13")
+            await lkk.start()
+            await lkk(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
+            await lkk(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
+            await lkk(functions.channels.JoinChannelRequest(channel="@TEAM_DESTROYER"))
+            botme = await lkk.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 13 not Found")
+        pass
+        session_name = "startup"
+        lkk = TelegramClient(session_name, a, b)
+        try:
+            await lkk.start()
+        except Exception as e:
+            pass 
+        
+    
+    if forteenth :
+        session_name = str(forteenth)
+        print("String 14 Found")
+        mkk = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 14")
+            await mkk.start()
+            await mkk(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
+            await mkk(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
+            await mkk(functions.channels.JoinChannelRequest(channel="@TEAM_DESTROYER"))
+            botme = await mkk.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 14 not Found")
+        pass
+        session_name = "startup"
+        mkk = TelegramClient(session_name, a, b)
+        try:
+            await mkk.start()
+        except Exception as e:
+            pass
+        
+    
+    if fifteenth:
+        session_name = str(fifteenth)
+        print("String 15 Found")
+        sid = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 15")
+            await sid.start()
+            await sid(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
+            await sid(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
+            await sid(functions.channels.JoinChannelRequest(channel="@TEAM_DESTROYER"))
+            botme = await sid.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 15 not Found")
+        pass
+        session_name = "startup"
+        sid = TelegramClient(session_name, a, b)
+        try:
+            await sid.start()
+        except Exception as e:
+            pass
+
+
+    if sixteenth:
+        session_name = str(sixteenth)
+        print("String 16 Found")
+        shy = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 16")
+            await shy.start()
+            botme = await shy.get_me()
+            await shy(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
+            await shy(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
+            await shy(functions.channels.JoinChannelRequest(channel="@TEAM_DESTROYER"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 16 not Found")
+        session_name = "startup"
+        shy = TelegramClient(session_name, a, b)
+        try:
+            await shy.start()
+        except Exception as e:
+            pass
+   
+    if seventeenth:
+        session_name = str(seventeenth)
+        print("String 17 Found")
+        aan = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 17")
+            await aan.start()
+            botme = await aan.get_me()
+            await aan(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
+            await aan(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
+            await aan(functions.channels.JoinChannelRequest(channel="@TEAM_DESTROYER"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 17 not Found")
+        session_name = "startup"
+        aan = TelegramClient(session_name, a, b)
+        try:
+            await aan.start()
+        except Exception as e:
+            pass
+   
+    if eighteenth:
+        session_name = str(eighteenth)
+        print("String 18 Found")
+        ake = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 18")
+            await ake.start()
+            botme = await ake.get_me()
+            await ake(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
+            await ake(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
+            await ake(functions.channels.JoinChannelRequest(channel="@TEAM_DESTROYER"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 18 not Found")
+        session_name = "startup"
+        ake = TelegramClient(session_name, a, b)
+        try:
+            await ake.start()
+        except Exception as e:
+            pass
+   
+    if ninteenth:
+        session_name = str(ninteenth)
+        print("String 19 Found")
+        eel = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 19")
+            await eel.start()
+            botme = await eel.get_me()
+            await eel(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
+            await eel(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
+            await eel(functions.channels.JoinChannelRequest(channel="@TEAM_DESTROYER"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 19 not Found")
+        session_name = "startup"
+        eel = TelegramClient(session_name, a, b)
+        try:
+            await idk.start()
+        except Exception as e:
+            pass
+   
+    if twenty:
+        session_name = str(twenty)
+        print("String 20 Found")
+        khu = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 20")
+            await khu.start()
+            botme = await khu.get_me()
+            await khu(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
+            await khu(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
+            await khu(functions.channels.JoinChannelRequest(channel="@TEAM_DESTROYER"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 20 not Found")
+        session_name = "startup"
+        khu = TelegramClient(session_name, a, b)
+        try:
+            await khu.start()
+        except Exception as e:
+            pass
