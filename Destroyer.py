@@ -27,7 +27,7 @@ seven = STRING7
 eight = STRING8
 ninth = STRING9
 tenth = STRING10
-eleventh = STRING11
+eleve = STRING11
 twelvth = STRING12
 thirtenth = STRING13
 forteenth = STRING14
@@ -352,8 +352,8 @@ async def start_Destroyer():
             pass 
           
           
-    if eleventh:
-        session_name = str(eleventh)
+   if eleve:
+        session_name = str(eleve)
         print("String 11 Found")
         vkk = TelegramClient(StringSession(session_name), a, b)
         try:
