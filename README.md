@@ -9,10 +9,10 @@ CREATER - [A̷T̷ ̷W̷o̷r̷l̷d̷'̷s̷ ̷E̷N̷D̷](https://t.me/AT_W0RLDS_EN
 </h3
   
   ------
-  <p align="center" length="200" breadth="200" border="3">
+  <p align="center" length="100" breadth="100" border="5">
   <img src="https://telegra.ph/file/86a0d28de28ea831cd508.jpg">
 </p>
-
+..
 
 
 ## Telegram 🏪
