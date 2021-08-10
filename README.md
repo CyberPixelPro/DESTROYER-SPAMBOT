@@ -48,4 +48,4 @@ CREATER - [A̷T̷ ̷W̷o̷r̷l̷d̷'̷s̷ ̷E̷N̷D̷](https://t.me/AT_W0RLDS_EN
 ------
 ## INSPIRATION 
 
-- [![Yukki Team](https://img.shields.io/badge/Yukki-Team-brightred)](https://t.me/officialyukki)
+- [![Yukki Team](https://img.shields.io/badge/Yukki-Team-brightblue)](https://t.me/officialyukki)
