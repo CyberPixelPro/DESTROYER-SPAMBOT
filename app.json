@@ -58,11 +58,6 @@
         "value": "",
         "required": false
       },
-      "STRING11": {
-        "description": "Telethon String Session",
-        "value": "",
-        "required": false
-      },
       "STRING12": {
         "description": "Telethon String Session",
         "value": "",
