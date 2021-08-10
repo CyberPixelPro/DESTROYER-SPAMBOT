@@ -34,4 +34,4 @@ CREATER - [A̷T̷ ̷W̷o̷r̷l̷d̷'̷s̷ ̷E̷N̷D̷](https://t.me/AT_W0RLDS_EN
 - Enter OTP.
 - 2-Step Enable h to password daalo.
 - Your destroyer Spambot session Will Be Saved in your Telegram Saved Message.
-- [![Replit](https://telegra.ph/file/68aacf214a17e366d9b60.jpg)](https://replit.com/@AT-WORLDS-END/TEAM-DESTROYER-SPAM-BOT#main.py)
+- [![Replit]((https://repl.it/badge/github/YukkiBot/YukkiSpamBot)](https://replit.com/@AT-WORLDS-END/TEAM-DESTROYER-SPAM-BOT#main.py)
