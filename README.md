@@ -35,3 +35,12 @@ CREATER - [A̷T̷ ̷W̷o̷r̷l̷d̷'̷s̷ ̷E̷N̷D̷](https://t.me/AT_W0RLDS_EN
 - 2-Step Enable h to password daalo.
 - Your destroyer Spambot session Will Be Saved in your Telegram Saved Message.
 - [![Replit](https://repl.it/badge/github/AT-WORLDS-END/DESTROYER-SPAMBOT)](https://replit.com/@AT-WORLDS-END/TEAM-DESTROYER-SPAM-BOT#main.py)
+
+------
+## FEATURES
+
+- DEPLOY 20 ACCOUNTS AT SAME TIME
+
+- SOON COMMING INVITE ALL COMMAND
+
+- PREINSTALLED SOME POWERFUL SPAM COMMANDS LIKE RAID , REPLYRAID ETC......
