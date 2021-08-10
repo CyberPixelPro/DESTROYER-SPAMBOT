@@ -17,7 +17,7 @@ CREATER - [A̷T̷ ̷W̷o̷r̷l̷d̷'̷s̷ ̷E̷N̷D̷](https://t.me/AT_W0RLDS_EN
 
 ## Telegram 🏪
 - [![Telegram Group](https://img.shields.io/badge/Telegram-Group-brightgreen)](https://t.me/TEAM_DESTROYER_ON_STRICK)
-- [![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-brightgreen)](https://t.me/TEAM_DESTROYER)
+- [![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-brightgreen)](https://t.me/DESTROYER_SPAMBOT)
   
   
 ------
