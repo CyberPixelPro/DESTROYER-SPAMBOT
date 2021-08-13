@@ -44,14 +44,11 @@
 - [![Replit](https://repl.it/badge/github/AT-WORLDS-END/DESTROYER-SPAMBOT)](https://replit.com/@AT-WORLDS-END/TEAM-DESTROYER-SPAM-BOT#main.py)
 
 ------
-## FEATURES
-
-- DEPLOY 20 ACCOUNTS AT SAME TIME
-
-- SOON COMMING INVITE ALL COMMAND
-
-- PREINSTALLED SOME POWERFUL SPAM COMMANDS LIKE RAID , REPLYRAID ETC......
-
+## Necessary Variable
+- `API_ID` - Your API_ID from [my.telegram.org](https://my.telegram.org/)
+- `API_HASH` - Your API_HASH from [my.telegram.org](https://my.telegram.org/)
+- `SESSION` - SessionString for your accounts login session. Get it Using Telethon String Session
+- 
 ------
 ## INSPIRATION 
 
