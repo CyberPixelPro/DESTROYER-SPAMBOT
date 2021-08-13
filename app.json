@@ -114,17 +114,17 @@
         "required": false
       },
       "API_ID": {
-        "description": "YE BHI MAI HI KRDU, API ID DAALO APNI XD",
+        "description": "Get Using my.telegram.org",
         "value": "",
         "required": true
       },
       "API_HASH": {
-        "description": "YE BHI DAAL DENA GURU, YHA TK AAYA H TO ITNA TO NOOB NI HOGA 😂😂😂",
+        "description": "Get Using my.telegram.org",
         "value": "",
         "required": true
       },
       "SUDO": {
-        "description": "MERA SUDO PDE RHNE DENA, BIGAD NI JAYEGA KUCH HEHE XD, ACCHA PRANI HI HU 😂🤣(❁´◡`❁) ",
+        "description": "User ID | Whom You want to provide bot Access ",
         "value": "",
         "required": true
       }
