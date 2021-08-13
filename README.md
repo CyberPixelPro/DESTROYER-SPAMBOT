@@ -53,6 +53,13 @@
 - PREINSTALLED SOME POWERFUL SPAM COMMANDS LIKE RAID , REPLYRAID ETC......
 
 ------
+## NECCESSARY VARIABLEs
+- `API_ID` : EXTRACT USING my.telegram.org WARN : We Do Not Recommend Any Bot **USE AT YOUR OWN RISK**
+- `API_HASH` : EXTRACT USING my.telegram.org 
+- `SESSIONS` : Telethon String Session | Use Our REPL
+- `SUDO_USERS` : Your ID (Whom You Want To Provide Bot Access) **Without This Var Destroyer Will Not Work**
+
+------
 ## INSPIRATION 
 
 - [![Yukki Team](https://img.shields.io/badge/Yukki-Team-brightblue)](https://t.me/officialyukki)
