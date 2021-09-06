@@ -1128,7 +1128,7 @@ async def _(e):
             
             
             
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@idk.on(events.NewMessage(incoming=True, pattern=r"\*ping"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @hdk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
