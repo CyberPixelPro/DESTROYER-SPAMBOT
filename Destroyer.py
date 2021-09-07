@@ -27,6 +27,7 @@ seven = STRING7
 eight = STRING8
 ninth = STRING9
 tenth = STRING10
+eleventh = STRING11
 twelvth = STRING12
 thirtenth = STRING13
 forteenth = STRING14
@@ -348,6 +349,33 @@ async def start_Destroyer():
         try:
             await edk.start()
         except Exception as e:
+            pass
+        
+        
+    if eleventh:
+        session_name = str(eleventh)
+        print("String 11 Found")
+        edk = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 11")
+            await edk.start()
+            await edk(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
+            await edk(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
+            await edk(functions.channels.JoinChannelRequest(channel="@DESTROYER_SPAMBOT"))
+            botme = await edk.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 11 not Found")
+        pass
+        session_name = "startup"
+        edk = TelegramClient(session_name, a, b)
+        try:
+            await edk.start()
+        except Exception as e:
             pass 
           
           
@@ -655,6 +683,7 @@ async def _(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
@@ -691,6 +720,7 @@ async def _(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
@@ -728,6 +758,7 @@ async def _(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
@@ -766,6 +797,7 @@ async def _(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
@@ -817,6 +849,7 @@ async def spam(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
@@ -876,6 +909,7 @@ async def spam(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
@@ -932,6 +966,7 @@ async def spam(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
@@ -993,6 +1028,7 @@ async def spam(e):
 @cdk.on(events.NewMessage(incoming=True))
 @edk.on(events.NewMessage(incoming=True))
 @ddk.on(events.NewMessage(incoming=True))
+@vkk.on(events.NewMessage(incoming=True))
 @kkk.on(events.NewMessage(incoming=True))
 @lkk.on(events.NewMessage(incoming=True))
 @mkk.on(events.NewMessage(incoming=True))
@@ -1029,6 +1065,7 @@ async def _(event):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
@@ -1082,6 +1119,7 @@ async def _(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
@@ -1138,6 +1176,7 @@ async def _(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
@@ -1170,6 +1209,7 @@ async def ping(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
@@ -1241,6 +1281,7 @@ async def restart(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 @kkk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
