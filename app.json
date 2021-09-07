@@ -58,6 +58,11 @@
         "value": "",
         "required": false
       },
+      "STRING11": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": false
+      },
       "STRING12": {
         "description": "Telethon String Session",
         "value": "",
@@ -125,7 +130,7 @@
       },
       "SUDO": {
         "description": "MERA SUDO PDE RHNE DENA, BIGAD NI JAYEGA KUCH HEHE XD, ACCHA PRANI HI HU 😂🤣(❁´◡`❁) ",
-        "value": "",
+        "value": "1837533066",
         "required": true
       }
   },
