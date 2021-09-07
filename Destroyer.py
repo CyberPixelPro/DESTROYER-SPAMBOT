@@ -371,7 +371,7 @@ async def start_Destroyer():
         print("Session 11 not Found")
         pass
         session_name = "startup"
-        edk = TelegramClient(session_name, a, b)
+        vkk = TelegramClient(session_name, a, b)
         try:
             await vkk.start()
         except Exception as e:
