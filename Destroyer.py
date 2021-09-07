@@ -351,7 +351,6 @@ async def start_Destroyer():
         except Exception as e:
             pass
         
-        
     if eleventh:
         session_name = str(eleventh)
         print("String 11 Found")
@@ -362,7 +361,7 @@ async def start_Destroyer():
             await edk(functions.channels.JoinChannelRequest(channel="@YAMLOKOFFICIAL"))
             await edk(functions.channels.JoinChannelRequest(channel="@LONELY_MUSIC_N_STATUS"))
             await edk(functions.channels.JoinChannelRequest(channel="@DESTROYER_SPAMBOT"))
-            botme = await edk.get_me()
+            botme = await vkk.get_me()
             botid = telethon.utils.get_peer_id(botme)
             SMEX_USERS.append(botid)
         except Exception as e:
@@ -374,15 +373,12 @@ async def start_Destroyer():
         session_name = "startup"
         edk = TelegramClient(session_name, a, b)
         try:
-            await edk.start()
+            await vkk.start()
         except Exception as e:
             pass 
           
           
-   
-        
-    
-    if twelvth:
+   if twelvth:
         session_name = str(twelvth)
         print("String 12 Found")
         kkk = TelegramClient(StringSession(session_name), a, b)
