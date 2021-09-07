@@ -354,7 +354,7 @@ async def start_Destroyer():
     if eleventh:
         session_name = str(eleventh)
         print("String 11 Found")
-        edk = TelegramClient(StringSession(session_name), a, b)
+        vkk = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 11")
             await vkk.start()
