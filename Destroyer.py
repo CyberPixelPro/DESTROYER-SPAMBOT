@@ -378,7 +378,7 @@ async def start_Destroyer():
             pass 
           
           
-   if twelvth:
+    if twelvth:
         session_name = str(twelvth)
         print("String 12 Found")
         kkk = TelegramClient(StringSession(session_name), a, b)
