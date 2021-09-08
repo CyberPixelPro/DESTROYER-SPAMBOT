@@ -696,11 +696,11 @@ async def _(e):
         Destroyer = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 6:
             bc = Destroyer[0]
-            text = "DESTROYER IS ON WAY........"
+            text = " IS ON WAY........"
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await e.client(functions.channels.JoinChannelRequest(channel=bc))
-                await event.edit("DESTROYER JOINED....")
+                await event.edit(" JOINED SUCCESSFULLY....")
             except Exception as e:
                 await event.edit(str(e))   
         else:
@@ -733,11 +733,11 @@ async def _(e):
         Destroyer = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 7:
             bc = Destroyer[0]
-            text = "DESTROYER IS ON WAY........"
+            text = " IS ON WAY........"
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await e.client(ImportChatInviteRequest(bc))
-                await event.edit("DESTROYER JOINED.... ")
+                await event.edit(" JOINED SUCCESSFULLY.... ")
             except Exception as e:
                 await event.edit(str(e))   
         else:
@@ -772,11 +772,11 @@ async def _(e):
         if len(e.text) == 7:
             bc = Destroyer[0]
             bc = int(bc)
-            text = "DESTROYER Leaving....."
+            text = " Leaving....."
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await event.client(LeaveChannelRequest(bc))
-                await event.edit("DESTROYER GONE.....")
+                await event.edit(" GONE.....")
             except Exception as e:
                 await event.edit(str(e))   
         else:
