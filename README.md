@@ -30,7 +30,7 @@
 ------
 ## Deploy To Heroku
 - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AT-WORLDS-END/DESTROYER-SPAMBOT)
-
+- PLEASE NOTE IT CAREFULLY , 1] SUDO HANDLER FOR FIRST 10 STRINGS IS `.` 2] SUDO HANDLER FOR LAST 10 STRINGS IS `*`
 
 ------
 ## DESTROYER SESSION 
