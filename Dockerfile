@@ -9,4 +9,4 @@ RUN pip install --no-cache-dir -U pip \
 
 COPY . .
 
-CMD ["python", "Destroyer.py"]
+CMD ["python3", "Destroyer.py"]
