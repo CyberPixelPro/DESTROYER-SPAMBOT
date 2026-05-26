@@ -1,5 +1,9 @@
 import os
 import sys
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8')
 import random
 from datetime import datetime
 from os import execl
@@ -103,7 +107,6 @@ async def start_Destroyer():
             botid = telethon.utils.get_peer_id(botme)
             SMEX_USERS.append(botid)
         except Exception as e:
-            idk = "smex"
             print(e)
             pass
     else:
@@ -133,13 +136,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 2 not Found")
-        pass
-        session_name = "startup"
-        ydk = TelegramClient(session_name, a, b)
-        try:
-            await ydk.start()
-        except Exception as e:
-            pass
+        ydk = TelegramClient(StringSession(), a, b)
 
     if smexxx:
         session_name = str(smexxx)
@@ -159,13 +156,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 3 not Found")
-        pass
-        session_name = "startup"
-        wdk = TelegramClient(session_name, a, b)
-        try:
-            await wdk.start()
-        except Exception as e:
-            pass
+        wdk = TelegramClient(StringSession(), a, b)
 
     if smexxxx:
         session_name = str(smexxxx)
@@ -185,13 +176,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 4 not Found")
-        pass
-        session_name = "startup"
-        hdk = TelegramClient(session_name, a, b)
-        try:
-            await hdk.start()
-        except Exception as e:
-            pass
+        hdk = TelegramClient(StringSession(), a, b)
 
     if smexxxxx:
         session_name = str(smexxxxx)
@@ -211,13 +196,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 5 not Found")
-        pass
-        session_name = "startup"
-        sdk = TelegramClient(session_name, a, b)
-        try:
-            await sdk.start()
-        except Exception as e:
-            pass
+        sdk = TelegramClient(StringSession(), a, b)
                   
     if sixth:
         session_name = str(sixth)
@@ -237,13 +216,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 6 not Found")
-        pass
-        session_name = "startup"
-        adk = TelegramClient(session_name, a, b)
-        try:
-            await adk.start()
-        except Exception as e:
-            pass
+        adk = TelegramClient(StringSession(), a, b)
 
     if seven:
         session_name = str(seven)
@@ -263,13 +236,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 7 not Found")
-        pass
-        session_name = "startup"
-        bdk = TelegramClient(session_name, a, b)
-        try:
-            await bdk.start()
-        except Exception as e:
-            pass    
+        bdk = TelegramClient(StringSession(), a, b)
         
     
     if eight:
@@ -290,13 +257,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 8 not Found")
-        pass
-        session_name = "startup"
-        cdk = TelegramClient(session_name, a, b)
-        try:
-            await cdk.start()
-        except Exception as e:
-            pass   
+        cdk = TelegramClient(StringSession(), a, b)
         
     if ninth:
         session_name = str(ninth)
@@ -316,13 +277,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 9 not Found")
-        pass
-        session_name = "startup"
-        ddk = TelegramClient(session_name, a, b)
-        try:
-            await ddk.start()
-        except Exception as e:
-            pass   
+        ddk = TelegramClient(StringSession(), a, b)
     
   
     if tenth:
@@ -343,13 +298,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 10 not Found")
-        pass
-        session_name = "startup"
-        edk = TelegramClient(session_name, a, b)
-        try:
-            await edk.start()
-        except Exception as e:
-            pass
+        edk = TelegramClient(StringSession(), a, b)
         
     if eleventh:
         session_name = str(eleventh)
@@ -369,14 +318,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 11 not Found")
-        pass
-        session_name = "startup"
-        vkk = TelegramClient(session_name, a, b)
-        try:
-            await vkk.start()
-        except Exception as e:
-            pass 
-          
+        vkk = TelegramClient(StringSession(), a, b)          
           
     if twelvth:
         session_name = str(twelvth)
@@ -396,13 +338,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 12 not Found")
-        pass
-        session_name = "startup"
-        kkk = TelegramClient(session_name, a, b)
-        try:
-            await kkk.start()
-        except Exception as e:
-            pass   
+        kkk = TelegramClient(StringSession(), a, b)
     
   
     if thirtenth:
@@ -423,14 +359,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 13 not Found")
-        pass
-        session_name = "startup"
-        lkk = TelegramClient(session_name, a, b)
-        try:
-            await lkk.start()
-        except Exception as e:
-            pass 
-        
+        lkk = TelegramClient(StringSession(), a, b)        
     
     if forteenth :
         session_name = str(forteenth)
@@ -450,13 +379,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 14 not Found")
-        pass
-        session_name = "startup"
-        mkk = TelegramClient(session_name, a, b)
-        try:
-            await mkk.start()
-        except Exception as e:
-            pass
+        mkk = TelegramClient(StringSession(), a, b)
         
     
     if fifteenth:
@@ -477,13 +400,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 15 not Found")
-        pass
-        session_name = "startup"
-        sid = TelegramClient(session_name, a, b)
-        try:
-            await sid.start()
-        except Exception as e:
-            pass
+        sid = TelegramClient(StringSession(), a, b)
 
 
     if sixteenth:
@@ -504,12 +421,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 16 not Found")
-        session_name = "startup"
-        shy = TelegramClient(session_name, a, b)
-        try:
-            await shy.start()
-        except Exception as e:
-            pass
+        shy = TelegramClient(StringSession(), a, b)
    
     if seventeenth:
         session_name = str(seventeenth)
@@ -529,12 +441,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 17 not Found")
-        session_name = "startup"
-        aan = TelegramClient(session_name, a, b)
-        try:
-            await aan.start()
-        except Exception as e:
-            pass
+        aan = TelegramClient(StringSession(), a, b)
    
     if eighteenth:
         session_name = str(eighteenth)
@@ -554,12 +461,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 18 not Found")
-        session_name = "startup"
-        ake = TelegramClient(session_name, a, b)
-        try:
-            await ake.start()
-        except Exception as e:
-            pass
+        ake = TelegramClient(StringSession(), a, b)
    
     if ninteenth:
         session_name = str(ninteenth)
@@ -579,12 +481,7 @@ async def start_Destroyer():
             pass
     else:
         print("Session 19 not Found")
-        session_name = "startup"
-        eel = TelegramClient(session_name, a, b)
-        try:
-            await idk.start()
-        except Exception as e:
-            pass
+        eel = TelegramClient(StringSession(), a, b)
    
     if twenty:
         session_name = str(twenty)
@@ -604,15 +501,11 @@ async def start_Destroyer():
             pass
     else:
         print("Session 20 not Found")
-        session_name = "startup"
-        khu = TelegramClient(session_name, a, b)
-        try:
-            await khu.start()
-        except Exception as e:
-            pass
+        khu = TelegramClient(StringSession(), a, b)
         
         
-loop = asyncio.get_event_loop()
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
 loop.run_until_complete(start_Destroyer())
 
 async def gifspam(e, smex):
@@ -1297,7 +1190,7 @@ async def help(e):
 
 async def help(e):
     if e.sender_id in SMEX_USERS:
-       text = "𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n\n𝙐𝙩𝙞𝙡𝙨 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n*ping\n*restart\n\n𝙐𝙨𝙚𝙧𝙗𝙤𝙩 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n*bio\n*join\n*pjoin\n*leave\n\*𝙎𝙥𝙖𝙢 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n*spam\n*delayspam\n*bigspam\n*raid\n*replyraid\n*dreplyraid\n\n\nFor more help regarding usage of plugins type plugins name"
+       text = "𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n\n𝙐𝙩𝙞𝙡𝙨 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n*ping\n*restart\n\n𝙐𝙨𝙚𝙧𝙗𝙤𝙩 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n*bio\n*join\n*pjoin\n*leave\n\n𝙎𝙥𝙖𝙢 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n*spam\n*delayspam\n*bigspam\n*raid\n*replyraid\n*dreplyraid\n\n\nFor more help regarding usage of plugins type plugins name"
        await e.reply(text, parse_mode=None, link_preview=None )
                 
         

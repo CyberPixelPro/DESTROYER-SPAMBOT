@@ -1,4 +1,4 @@
 Telethon
 python-dotenv
 asyncio
-TgCrypto
+
