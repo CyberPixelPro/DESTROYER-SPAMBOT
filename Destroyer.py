@@ -66,6 +66,7 @@ khu = ""
 
 
 que = {}
+_allspam_running = False
 
 SMEX_USERS = []
 for x in SUDO: 
@@ -508,6 +509,16 @@ loop = asyncio.new_event_loop()
 asyncio.set_event_loop(loop)
 loop.run_until_complete(start_Destroyer())
 
+# Build list of active (connected) clients for round-robin allspam
+_all_client_vars = [
+    (smex, idk), (smexx, ydk), (smexxx, wdk), (smexxxx, hdk), (smexxxxx, sdk),
+    (sixth, adk), (seven, bdk), (eight, cdk), (ninth, ddk), (tenth, edk),
+    (eleventh, vkk), (twelvth, kkk), (thirtenth, lkk), (forteenth, mkk),
+    (fifteenth, sid), (sixteenth, shy), (seventeenth, aan), (eighteenth, ake),
+    (ninteenth, eel), (twenty, khu),
+]
+ACTIVE_CLIENTS = [client for string_val, client in _all_client_vars if string_val]
+
 async def gifspam(e, smex):
     try:
         await e.client(
@@ -625,14 +636,20 @@ async def _(e):
     if e.sender_id in SMEX_USERS:
         Destroyer = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 7:
-            bc = Destroyer[0]
+            bc = Destroyer[0].strip().rstrip("/")
+            if "/" in bc:
+                bc = bc.split("/")[-1]
+            if "+" in bc:
+                bc = bc.split("+")[-1]
+            if "?" in bc:
+                bc = bc.split("?")[0]
             text = "DESTROYER IS ON WAY........"
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await e.client(ImportChatInviteRequest(bc))
                 await event.edit("DESTROYER JOINED.... ")
-            except Exception as e:
-                await event.edit(str(e))   
+            except Exception as err:
+                await event.edit(str(err))   
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
             
@@ -710,7 +727,9 @@ async def spam(e):
             counter = int(Destroyer[0])
             if counter > 100:
                 return await e.reply(error, parse_mode=None, link_preview=None )
-            await asyncio.wait([e.respond(message) for i in range(counter)])
+            for _ in range(counter):
+                await e.respond(message)
+                await asyncio.sleep(2.0)
         elif e.reply_to_msg_id and smex.media:  
             counter = int(Destroyer[0])
             if counter > 100:
@@ -718,12 +737,15 @@ async def spam(e):
             for _ in range(counter):
                 smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
                 await gifspam(e, smex)  
+                await asyncio.sleep(2.0)
         elif e.reply_to_msg_id and smex.text:
             message = smex.text
             counter = int(Destroyer[0])
             if counter > 100:
                 return await e.reply(error, parse_mode=None, link_preview=None )
-            await asyncio.wait([e.respond(message) for i in range(counter)])
+            for _ in range(counter):
+                await e.respond(message)
+                await asyncio.sleep(2.0)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
             
@@ -825,21 +847,21 @@ async def spam(e):
                         await smex.reply(message)
                     else:
                         await e.client.send_message(e.chat_id, message)
-                    await asyncio.sleep(0.1)
+                    await asyncio.sleep(2.0)
         elif e.reply_to_msg_id and smex.media:  
             counter = int(Destroyer[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "document"):
                     smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
                     await gifspam(e, smex) 
-                await asyncio.sleep(0.1)  
+                await asyncio.sleep(2.0)  
         elif e.reply_to_msg_id and smex.text:
             message = smex.text
             counter = int(Destroyer[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
                     await e.client.send_message(e.chat_id, message)
-                    await asyncio.sleep(0.3)
+                    await asyncio.sleep(2.0)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
 
@@ -1054,7 +1076,100 @@ async def _(e):
             
             
             
+
+# ==================== ALLSPAM (Round-Robin across all clients) ====================
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.allspam"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.allspam"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.allspam"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.allspam"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.allspam"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.allspam"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.allspam"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.allspam"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.allspam"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.allspam"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\*allspam"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\*allspam"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\*allspam"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\*allspam"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\*allspam"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\*allspam"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\*allspam"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\*allspam"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\*allspam"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\*allspam"))
+
+async def allspam(e):
+    global _allspam_running
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗔𝗹𝗹𝗦𝗽𝗮𝗺 (𝗥𝗼𝘂𝗻𝗱-𝗥𝗼𝗯𝗶𝗻)\n\nCommand:\n\n.allspam <count per client> <message>\n\nAll active clients will take turns sending the message.\nEach client sends <count> messages.\n2 sec gap between every message.\nTotal messages = count x active clients."
+    if e.sender_id in SMEX_USERS:
+        # Only let one client handle this command
+        if _allspam_running:
+            return
+        _allspam_running = True
+        
+        try:
+            if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
+                return await e.reply(usage, parse_mode=None, link_preview=None)
+            Destroyer = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+            smex_reply = await e.get_reply_message()
+            message = None
+            counter = 0
+            if len(Destroyer) == 2:
+                try:
+                    counter = int(Destroyer[0])
+                except ValueError:
+                    return await e.reply(usage, parse_mode=None, link_preview=None)
+                message = str(Destroyer[1])
+            elif e.reply_to_msg_id and smex_reply and smex_reply.text:
+                try:
+                    counter = int(Destroyer[0])
+                except ValueError:
+                    return await e.reply(usage, parse_mode=None, link_preview=None)
+                message = smex_reply.text
+            else:
+                return await e.reply(usage, parse_mode=None, link_preview=None)
             
+            # Get only truly connected clients
+            clients = []
+            for c in ACTIVE_CLIENTS:
+                try:
+                    if c.is_connected():
+                        clients.append(c)
+                except:
+                    pass
+            
+            if not clients:
+                return await e.reply("No active clients found!", parse_mode=None, link_preview=None)
+            
+            total_msgs = counter * len(clients)
+            status = await e.reply(
+                f"🚀 AllSpam Started!\n\n"
+                f"Active Clients: {len(clients)}\n"
+                f"Messages per client: {counter}\n"
+                f"Total messages: {total_msgs}\n"
+                f"Delay: 2 sec between each message",
+                parse_mode=None, link_preview=None
+            )
+            
+            sent = 0
+            for round_num in range(counter):
+                for client in clients:
+                    try:
+                        await client.send_message(e.chat_id, message)
+                        sent += 1
+                    except Exception as err:
+                        print(f"AllSpam error on client: {err}")
+                    await asyncio.sleep(2.0)
+            
+            await status.edit(
+                f"✅ AllSpam Finished!\n\n"
+                f"Total sent: {sent}/{total_msgs}"
+            )
+        finally:
+            _allspam_running = False
+
+
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
@@ -1173,7 +1288,7 @@ async def restart(e):
 
 async def help(e):
     if e.sender_id in SMEX_USERS:
-       text = "𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n\n𝙐𝙩𝙞𝙡𝙨 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.ping\n.restart\n\n𝙐𝙨𝙚𝙧𝙗𝙤𝙩 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.bio\n.join\n.pjoin\n.leave\n\n𝙎𝙥𝙖𝙢 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.spam\n.delayspam\n.bigspam\n.raid\n.replyraid\n.dreplyraid\n\n\nFor more help regarding usage of plugins type plugins name"
+       text = "𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n\n𝙐𝙩𝙞𝙡𝙨 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.ping\n.restart\n\n𝙐𝙨𝙚𝙧𝙗𝙤𝙩 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.bio\n.join\n.pjoin\n.leave\n\n𝙎𝙥𝙖𝙢 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.spam\n.delayspam\n.bigspam\n.allspam\n.raid\n.replyraid\n.dreplyraid\n\n\nFor more help regarding usage of plugins type plugins name"
        await e.reply(text, parse_mode=None, link_preview=None )
         
         
@@ -1190,7 +1305,7 @@ async def help(e):
 
 async def help(e):
     if e.sender_id in SMEX_USERS:
-       text = "𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n\n𝙐𝙩𝙞𝙡𝙨 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n*ping\n*restart\n\n𝙐𝙨𝙚𝙧𝙗𝙤𝙩 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n*bio\n*join\n*pjoin\n*leave\n\n𝙎𝙥𝙖𝙢 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n*spam\n*delayspam\n*bigspam\n*raid\n*replyraid\n*dreplyraid\n\n\nFor more help regarding usage of plugins type plugins name"
+       text = "𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n\n𝙐𝙩𝙞𝙡𝙨 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n*ping\n*restart\n\n𝙐𝙨𝙚𝙧𝙗𝙤𝙩 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n*bio\n*join\n*pjoin\n*leave\n\n𝙎𝙥𝙖𝙢 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n*spam\n*delayspam\n*bigspam\n*allspam\n*raid\n*replyraid\n*dreplyraid\n\n\nFor more help regarding usage of plugins type plugins name"
        await e.reply(text, parse_mode=None, link_preview=None )
                 
         
